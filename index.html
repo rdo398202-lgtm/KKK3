@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5c1717">
+<title>ប្រឡងតេស្តសមត្ថភាពប្រវត្តិសាស្ត្រកម្ពុជា ៣ សម័យកាល</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Moul&family=Battambang:wght@400;700&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b1a0e;--paper:#f7edd8;--card:#fffaf0;--gold:#b8862b;--gold2:#e3b75a;--maroon:#5c1717;--line:#e0cda3;--ok:#1f7a3f;--bad:#b3261e}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0}
+body{font-family:'Battambang','Noto Sans Khmer','Khmer OS Battambang',sans-serif;color:var(--ink);line-height:1.8;min-height:100vh;min-height:100dvh;
+background:radial-gradient(circle at 20% 0,#fff6df 0,transparent 45%),radial-gradient(circle at 90% 100%,#ecd9a8 0,transparent 50%),var(--paper);
+padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+header{background:linear-gradient(160deg,#3f0e0e,var(--maroon) 55%,#7a2a1a);color:#fff3d6;text-align:center;padding:26px 16px 30px;border-bottom:5px solid var(--gold);position:relative}
+header:after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:7px;border-bottom:2px solid var(--gold2)}
+.orn{color:var(--gold2);letter-spacing:10px;font-size:14px}
+h1{font-family:'Moul','Noto Sans Khmer',serif;font-weight:400;font-size:clamp(19px,5.4vw,30px);line-height:1.9;margin:6px 0 2px;text-shadow:0 2px 0 #00000055}
+header p{margin:0;font-size:clamp(13px,3.6vw,16px);color:#f3d99b}
+main{max-width:720px;margin:0 auto;padding:26px 14px 20px}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:14px;padding:20px 16px;box-shadow:0 8px 24px #5c17171f}
+h2{font-family:'Moul','Noto Sans Khmer',serif;font-weight:400;font-size:clamp(16px,4.6vw,21px);color:var(--maroon);margin:0 0 10px;line-height:1.9}
+label{display:block;font-weight:700;margin:14px 0 4px}
+input[type=text],input[type=password]{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px #e3b75a55}
+.btn{font:inherit;font-weight:700;font-size:17px;border:0;border-radius:12px;padding:13px 22px;cursor:pointer;background:linear-gradient(180deg,#8a2525,var(--maroon));color:#fff3d6;box-shadow:0 4px 0 #34090a;min-height:50px;touch-action:manipulation}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 #34090a}
+.btn.alt{background:#fff;color:var(--maroon);border:2px solid var(--maroon);box-shadow:none}
+.btn[disabled]{opacity:.45}
+.full{width:100%;margin-top:20px}
+.err{color:var(--bad);font-weight:700;min-height:24px;margin:8px 0 0}
+.eras{display:grid;gap:8px;margin:12px 0 4px}
+.eras div{border-left:6px solid;padding:6px 12px;background:#fff;border-radius:8px;font-size:15px}
+.rules{margin:10px 0 0;padding-left:20px;font-size:15px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px;margin-bottom:8px;color:#6b5236}
+.bar{height:10px;background:#ead9b0;border-radius:6px;overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .3s}
+.tag{display:inline-block;color:#fff;border-radius:20px;padding:1px 14px;font-size:14px;font-weight:700}
+.q{font-size:clamp(17px,4.6vw,20px);font-weight:700;margin:12px 0 14px;line-height:1.85}
+.opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;font:inherit;font-size:clamp(15px,4.2vw,18px);background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0;cursor:pointer;color:var(--ink);touch-action:manipulation}
+.opt b{flex:0 0 34px;height:34px;border-radius:50%;background:#f1e3bf;color:var(--maroon);display:grid;place-items:center;font-family:Arial,sans-serif}
+.opt.sel{border-color:var(--maroon);background:#fbeedd}
+.opt.sel b{background:var(--maroon);color:#fff}
+.nav{display:flex;gap:10px;margin-top:18px}
+.nav .btn{flex:1;padding:13px 8px}
+.dots{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:16px}
+.dots span{width:26px;height:26px;border-radius:50%;background:#eadbb6;font:12px/26px Arial,sans-serif;text-align:center;cursor:pointer}
+.dots .a{background:var(--gold);color:#fff}.dots .c{outline:3px solid var(--maroon)}
+.score{text-align:center}
+.big{font-family:'Moul',serif;font-size:clamp(38px,12vw,60px);color:var(--maroon);line-height:1.4}
+.grade{display:inline-block;font-size:26px;font-weight:700;background:var(--gold);color:#fff;border-radius:12px;padding:0 20px;margin:4px 0}
+.info{background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:10px 14px;margin:14px 0;font-size:15px;text-align:left}
+.rv{border:1px solid var(--line);border-left:6px solid;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff;font-size:15px}
+.rv.ok{border-left-color:var(--ok)}.rv.no{border-left-color:var(--bad)}
+.rv em{font-style:normal;font-weight:700}.ok em{color:var(--ok)}.no em{color:var(--bad)}
+.retake{margin-top:20px;border-top:1px dashed var(--line);padding-top:14px;text-align:center}
+.retake .box{display:none;margin-top:10px;text-align:left}
+footer{text-align:center;padding:10px 16px 34px;color:#5c4529;font-size:15px}
+footer .wish{font-family:'Moul',serif;color:var(--maroon);font-size:clamp(13px,3.8vw,16px);line-height:2}
+footer .by{margin-top:8px}
+@media(min-width:600px){.card{padding:28px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="orn">◆ ◆ ◆</div>
+  <h1>ប្រឡងតេស្តសមត្ថភាព<br>ប្រវត្តិសាស្ត្រកម្ពុជា ៣ សម័យកាល</h1>
+  <p>សង្គមរាស្ត្រនិយម · សាធារណរដ្ឋខ្មែរ · កម្ពុជាប្រជាធិបតេយ្យ</p>
+  <div class="orn" style="margin-top:6px">◆ ◆ ◆</div>
+</header>
+<main><div id="app"></div></main>
+<footer>
+  <div class="wish">សូមទទួលជោគជ័យក្នុងការប្រឡងបាក់ឌុបក្នុងថ្ងៃខាងមុខ<br>បាននិទ្ទេស A ទាំងអស់គ្នា</div>
+  <div class="by">អ្នកបង្កើតគេហទំព័រប្រឡង៖ <b>លី ពូអុី</b></div>
+</footer>
+
+<script>
+/* ===== ទិន្នន័យសំណួរ (Questions) ===== */
+var ERAS=[
+ {n:"សម័យសង្គមរាស្ត្រនិយម",c:"#1e4d8c"},
+ {n:"សម័យសាធារណរដ្ឋខ្មែរ",c:"#7a1f1f"},
+ {n:"សម័យកម្ពុជាប្រជាធិបតេយ្យ",c:"#2f5d3a"}
+];
+var Q=[
+ {e:0,q:"តើព្រះបាទនរោត្តម សីហនុ បានបង្កើតចលនាសង្គមរាស្ត្រនិយមនៅថ្ងៃ ខែ ឆ្នាំណា?",o:["ថ្ងៃទី២២ ខែមីនា ឆ្នាំ១៩៥៥","ថ្ងៃទី១៨ ខែមីនា ឆ្នាំ១៩៥៥","ថ្ងៃទី៩ ខែតុលា ឆ្នាំ១៩៥៥"]},
+ {e:0,q:"តើព្រះបាទនរោត្តម សីហនុ បានដាក់រាជ្យនៅឆ្នាំណា ដើម្បីចូលរួមដឹកនាំនយោបាយដោយផ្ទាល់?",o:["ឆ្នាំ១៩៥៣","ឆ្នាំ១៩៥៥","ឆ្នាំ១៩៥៧"]},
+ {e:0,q:"តើក្នុងការបោះឆ្នោតថ្ងៃទី១១ ខែកញ្ញា ឆ្នាំ១៩៥៥ ចលនាសង្គមរាស្ត្រនិយមទទួលបានអាសនៈប៉ុន្មាន?",o:["៨១ អាសនៈ","៩១ អាសនៈ (ទាំងអស់)","៩៩ អាសនៈ"]},
+ {e:0,q:"តើគោលនយោបាយសំខាន់មួយក្នុងវិស័យការបរទេសរបស់សម្តេចព្រះនរោត្តម សីហនុ ក្នុងសម័យសង្គមរាស្ត្រនិយមគឺជាអ្វី?",o:["គោលនយោបាយចូលបក្សសម្ព័ន្ធយោធាជាមួយមហាអំណាចមួយ","គោលនយោបាយអព្យាក្រឹត និងមិនចូលបក្សសម្ព័ន្ធ","គោលនយោបាយចូលរួមក្នុងសង្គ្រាមវៀតណាមដោយផ្ទាល់"]},
+ {e:0,q:"តើព្រឹត្តិការណ៍នយោបាយណាមួយបានបញ្ចប់សម័យសង្គមរាស្ត្រនិយមនៅឆ្នាំ១៩៧០?",o:["ការបោះឆ្នោតសកលនៅឆ្នាំ១៩៧០","ការបង្កើតរដ្ឋាភិបាលចម្រុះនៅឆ្នាំ១៩៧០","ការបោះឆ្នោតដកសម្តេចព្រះនរោត្តម សីហនុ ចេញពីតំណែងប្រមុខរដ្ឋ នៅថ្ងៃទី១៨ ខែមីនា ឆ្នាំ១៩៧០"]},
+ {e:1,q:"តើសាធារណរដ្ឋខ្មែរត្រូវបានប្រកាសបង្កើតជាផ្លូវការនៅថ្ងៃ ខែ ឆ្នាំណា?",o:["ថ្ងៃទី១៨ ខែមីនា ឆ្នាំ១៩៧០","ថ្ងៃទី៩ ខែតុលា ឆ្នាំ១៩៧០","ថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧០"]},
+ {e:1,q:"តើបុគ្គលណាជាមេដឹកនាំយោធា និងជាបុគ្គលសំខាន់ក្នុងការបង្កើតរបបសាធារណរដ្ឋខ្មែរ?",o:["សិរិមតៈ","អ៊ីង សារី","លន់ នល់"]},
+ {e:1,q:"តើរដ្ឋធម្មនុញ្ញនៃសាធារណរដ្ឋខ្មែរ ត្រូវបានអនុម័តតាមរយៈការបោះឆ្នោតប្រជាមតិនៅថ្ងៃណា?",o:["ថ្ងៃទី៣០ ខែមេសា ឆ្នាំ១៩៧២","ថ្ងៃទី៤ ខែមិថុនា ឆ្នាំ១៩៧២","ថ្ងៃទី៩ ខែតុលា ឆ្នាំ១៩៧០"]},
+ {e:1,q:"តើលោក លន់ នល់ ត្រូវបានជ្រើសតាំងជាប្រធានាធិបតីទីមួយនៃសាធារណរដ្ឋខ្មែរនៅថ្ងៃណា?",o:["ថ្ងៃទី១៨ ខែមីនា ឆ្នាំ១៩៧០","ថ្ងៃទី៤ ខែមិថុនា ឆ្នាំ១៩៧២","ថ្ងៃទី៣០ ខែមេសា ឆ្នាំ១៩៧២"]},
+ {e:1,q:"តើសាធារណរដ្ឋខ្មែរបានបញ្ចប់នៅពេលព្រឹត្តិការណ៍ប្រវត្តិសាស្ត្រណា?",o:["ការចុះហត្ថលេខាលើកិច្ចព្រមព្រៀងទីក្រុងប៉ារីស","ការប្រកាសបង្កើតសាធារណរដ្ឋខ្មែរ","កងកម្លាំងខ្មែរក្រហមចូលកាន់កាប់រាជធានីភ្នំពេញ នៅថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥"]},
+ {e:2,q:"តើកងកម្លាំងខ្មែរក្រហមបានចូលកាន់កាប់រាជធានីភ្នំពេញនៅថ្ងៃ ខែ ឆ្នាំណា?",o:["ថ្ងៃទី៧ ខែមករា ឆ្នាំ១៩៧៩","ថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥","ថ្ងៃទី៩ ខែតុលា ឆ្នាំ១៩៧០"]},
+ {e:2,q:"តើឈ្មោះជាផ្លូវការរបស់រដ្ឋកម្ពុជាក្នុងរបបខ្មែរក្រហមគឺជាអ្វី?",o:["សាធារណរដ្ឋប្រជាមានិតកម្ពុជា","សាធារណរដ្ឋខ្មែរ","កម្ពុជាប្រជាធិបតេយ្យ"]},
+ {e:2,q:"តើរដ្ឋធម្មនុញ្ញនៃកម្ពុជាប្រជាធិបតេយ្យត្រូវបានប្រកាសឱ្យប្រើប្រាស់នៅថ្ងៃ ខែ ឆ្នាំណា?",o:["ថ្ងៃទី៥ ខែមករា ឆ្នាំ១៩៧៦","ថ្ងៃទី១៧ ខែមេសា ឆ្នាំ១៩៧៥","ថ្ងៃទី៧ ខែមករា ឆ្នាំ១៩៧៩"]},
+ {e:2,q:"តើគោលនយោបាយសង្គមសេដ្ឋកិច្ចសំខាន់មួយរបស់របបកម្ពុជាប្រជាធិបតេយ្យគឺជាអ្វី?",o:["ការអភិវឌ្ឍសេដ្ឋកិច្ចទីផ្សារសេរី និងលើកទឹកចិត្តកម្មសិទ្ធិឯកជន","ការលុបបំបាត់ប្រាក់ និងការរៀបចំប្រជាជនឱ្យធ្វើការរួមគ្នាក្នុងសហករណ៍កសិកម្ម","ការពង្រីកវិស័យឧស្សាហកម្មឯកជន និងការបើកទីផ្សារអន្តរជាតិ"]},
+ {e:2,q:"តើរបបកម្ពុជាប្រជាធិបតេយ្យបានដួលរលំនៅខែមករា ឆ្នាំ១៩៧៩ ដោយសារព្រឹត្តិការណ៍អ្វី?",o:["ការបោះឆ្នោតសកលនៅទូទាំងប្រទេស","ការចុះហត្ថលេខាលើកិច្ចព្រមព្រៀងទីក្រុងប៉ារីស","ការវាយចូលរបស់កងទ័ពវៀតណាម និងកងកម្លាំងប្រឆាំងខ្មែរក្រហម ដែលនាំឱ្យភ្នំពេញត្រូវបានដណ្តើមកាន់កាប់នៅថ្ងៃទី៧ ខែមករា ឆ្នាំ១៩៧៩"]}
+];
+/* ===== គន្លឹះចម្លើយ (Answer key) — លំដាប់ដើម A=0, B=1, C=2 ===== */
+var KEY=[0,1,1,1,2, 1,2,0,1,2, 1,2,0,1,2];
+
+/* ===== លេខសម្ងាត់ និងឈ្មោះអ្នកបង្កើត (រក្សាទុកជា Hash មិនបង្ហាញជាអក្សរ) ===== */
+var HCODE="1t0zb2xamu7", HOWNER="1wdf49e7s3b";
+function H(s,seed){seed=seed||7;var h1=0xdeadbeef^seed,h2=0x41c6ce57^seed,i,c;
+ for(i=0;i<s.length;i++){c=s.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}
+ h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);
+ h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);
+ return (4294967296*(2097151&h2)+(h1>>>0)).toString(36)}
+function norm(s){return String(s).replace(/[\s\u200b\u200c\u200d]+/g,"").toLowerCase()}
+function hh(s){return H("kh3|"+norm(s))}
+
+/* ===== ការរក្សាទុកស្ថានភាព (មិនបាត់ពេល Refresh) ===== */
+var SK="kh3_exam_state_v1", mem=null;
+function load(){try{var r=localStorage.getItem(SK);if(r)return JSON.parse(r)}catch(e){}return mem}
+function save(){mem=S;try{localStorage.setItem(SK,JSON.stringify(S))}catch(e){}}
+function wipe(){S=null;mem=null;try{localStorage.removeItem(SK)}catch(e){}}
+var S=load();
+if(S&&(!S.ans||S.ans.length!==Q.length||!S.perm))S=null;
+
+var app=document.getElementById("app");
+function esc(t){return String(t).replace(/[&<>"']/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]})}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+var L=["A","B","C"];
+
+function render(){window.scrollTo(0,0);if(!S)return start();if(S.done)return result();quiz()}
+
+function start(){
+ app.innerHTML='<div class="card"><h2>ព័ត៌មានអ្នកប្រឡង</h2>'+
+ '<div class="eras">'+ERAS.map(function(e){return'<div style="border-color:'+e.c+'"><b>'+e.n+'</b> · ៥ សំណួរ</div>'}).join("")+'</div>'+
+ '<ul class="rules"><li>សរុប ១៥ សំណួរ ជ្រើសរើសចម្លើយ A, B, C (ត្រឹមត្រូវតែមួយ)។</li><li>ប្រឡងបានតែ <b>ម្តងគត់</b>។ ការ Refresh ឬបិទបើកទំព័រ មិនអាចចាប់ផ្តើមឡើងវិញបានទេ។</li></ul>'+
+ '<label for="n">ឈ្មោះសិស្ស</label><input id="n" type="text" autocomplete="off" placeholder="បំពេញឈ្មោះរបស់អ្នក">'+
+ '<label for="s">ឈ្មោះវិទ្យាល័យ</label><input id="s" type="text" autocomplete="off" placeholder="បំពេញឈ្មោះវិទ្យាល័យ">'+
+ '<label for="c">ថ្នាក់</label><input id="c" type="text" autocomplete="off" placeholder="បំពេញថ្នាក់">'+
+ '<div class="err" id="e"></div><button class="btn full" id="go">ចាប់ផ្តើមប្រឡង ◆</button></div>';
+ document.getElementById("go").onclick=function(){
+  var n=v("n"),s=v("s"),c=v("c");
+  if(!n||!s||!c){document.getElementById("e").textContent="សូមបំពេញឈ្មោះ វិទ្យាល័យ និងថ្នាក់ឱ្យគ្រប់។";return}
+  S={name:n,school:s,cls:c,owner:hh(n)===HOWNER,perm:Q.map(function(){return shuffle([0,1,2])}),ans:Q.map(function(){return null}),i:0,done:false};
+  save();render()};
+ function v(id){return document.getElementById(id).value.replace(/\s+/g," ").trim()}
+}
+
+function quiz(){
+ var i=S.i,q=Q[i],e=ERAS[q.e],p=S.perm[i],done=S.ans.filter(function(a){return a!==null}).length;
+ var h='<div class="card"><div class="top"><span class="tag" style="background:'+e.c+'">'+e.n+'</span><span>'+(i+1)+' / '+Q.length+'</span></div>'+
+ '<div class="bar"><i style="width:'+(done/Q.length*100)+'%"></i></div>'+
+ '<div class="q">សំណួរទី'+(i+1)+'៖ '+esc(q.q)+'</div>';
+ p.forEach(function(o,k){h+='<button class="opt'+(S.ans[i]===o?' sel':'')+'" data-o="'+o+'"><b>'+L[k]+'</b><span>'+esc(q.o[o])+'</span></button>'});
+ h+='<div class="nav">'+(i>0?'<button class="btn alt" id="pv">‹ ថយក្រោយ</button>':'')+
+ (i<Q.length-1?'<button class="btn" id="nx">បន្ទាប់ ›</button>':'<button class="btn" id="fin">បញ្ជូនចម្លើយ ✔</button>')+'</div>'+
+ '<div class="dots">'+Q.map(function(_,k){return'<span data-k="'+k+'" class="'+(S.ans[k]!==null?'a ':'')+(k===i?'c':'')+'">'+(k+1)+'</span>'}).join("")+'</div>'+
+ '<div class="err" id="e"></div></div>';
+ app.innerHTML=h;
+ [].forEach.call(app.querySelectorAll(".opt"),function(b){b.onclick=function(){S.ans[i]=+b.getAttribute("data-o");save();quiz()}});
+ [].forEach.call(app.querySelectorAll(".dots span"),function(d){d.onclick=function(){S.i=+d.getAttribute("data-k");save();render()}});
+ var pv=document.getElementById("pv"),nx=document.getElementById("nx"),fin=document.getElementById("fin");
+ if(pv)pv.onclick=function(){S.i--;save();render()};
+ if(nx)nx.onclick=function(){S.i++;save();render()};
+ if(fin)fin.onclick=function(){
+  var miss=S.ans.reduce(function(a,x,k){if(x===null)a.push(k+1);return a},[]);
+  if(miss.length&&!confirm("អ្នកមិនទាន់ឆ្លើយសំណួរទី "+miss.join(", ")+"។ តើចង់បញ្ជូនឬ?"))return;
+  if(!confirm("បញ្ជូនចម្លើយឥឡូវនេះ? បន្ទាប់ពីបញ្ជូន មិនអាចប្រឡងម្តងទៀតបានទេ។"))return;
+  S.done=true;save();render()};
+}
+
+function score(){return S.ans.reduce(function(s,a,k){return s+(a===KEY[k]?1:0)},0)}
+function grade(s){return s>=13?"A":s>=11?"B":s>=9?"C":s>=8?"D":s>=7?"E":"F"}
+function result(){
+ var s=score(),h='<div class="card score"><h2>លទ្ធផលប្រឡង</h2><div class="big">'+s+' / '+Q.length+'</div><div class="grade">និទ្ទេស '+grade(s)+'</div>'+
+ '<div class="info"><b>ឈ្មោះ៖</b> '+esc(S.name)+'<br><b>វិទ្យាល័យ៖</b> '+esc(S.school)+'<br><b>ថ្នាក់៖</b> '+esc(S.cls)+'</div>'+
+ '<p style="font-size:15px;margin:6px 0">អ្នកបានប្រឡងរួចរាល់ហើយ។ ការ Refresh មិនអាចប្រឡងម្តងទៀតបានទេ។</p>'+
+ '<div style="text-align:left"><h2 style="margin-top:18px">ពិនិត្យចម្លើយ</h2>';
+ Q.forEach(function(q,k){
+  var ok=S.ans[k]===KEY[k];
+  h+='<div class="rv '+(ok?'ok':'no')+'"><b>'+(k+1)+'. '+esc(q.q)+'</b><br><em>'+(ok?'✔ ត្រឹមត្រូវ':'✘ មិនត្រឹមត្រូវ')+'</em>'+
+  (S.ans[k]===null?'<br>អ្នកមិនបានឆ្លើយ':ok?'':'<br>ចម្លើយរបស់អ្នក៖ '+esc(q.o[S.ans[k]]))+
+  (ok?'':'<br>ចម្លើយត្រឹមត្រូវ៖ <b>'+esc(q.o[KEY[k]])+'</b>')+'</div>'});
+ h+='</div><div class="retake"><button class="btn alt" id="rt">ប្រឡងម្តងទៀត</button>'+
+ '<div class="box" id="bx"><label for="pw">លេខសម្ងាត់ពីអ្នកបង្កើត</label><input id="pw" type="password" inputmode="numeric" autocomplete="off" placeholder="បញ្ចូលលេខសម្ងាត់">'+
+ '<div class="err" id="e"></div><button class="btn full" id="ok">បញ្ជាក់</button></div></div></div>';
+ app.innerHTML=h;
+ document.getElementById("rt").onclick=function(){
+  if(S.owner){wipe();render();return}
+  document.getElementById("bx").style.display="block";document.getElementById("pw").focus()};
+ document.getElementById("ok").onclick=function(){
+  if(hh(document.getElementById("pw").value)===HCODE){wipe();render()}
+  else document.getElementById("e").textContent="លេខសម្ងាត់មិនត្រឹមត្រូវ។ សូមទាក់ទងអ្នកបង្កើតគេហទំព័រ។"};
+}
+render();
+</script>
+</body>
+</html>
